@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*1. how to move the picture to the left and the text to the right and making it inline-block*/
+/*2. how to exactly move to the exact section of the page*/
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:rgb(255, 255, 255)
+}
+
+h1, h2{
+    font-family: 'Lobster', sans-serif;
+}
+
+h2{
+    font-size: 55px;
+}
+
+
+h3, h4, h5, p{
+    font-family: 'Roboto', sans-serif;
+}
+
+h3{
+    font-size: 35px;
+}
+
+header{
+    font-family: 'Lobster', sans-serif;
+    overflow:hidden;
+    background-color: rgb(152, 152, 152);
+    /*background: rgb(255,120,120);
+    background: linear-gradient(90deg, rgba(255,120,120,1) 0%, rgba(248,255,128,1) 100%);*/
+    padding: 10px;
+    position:fixed;
+    z-index: 10;
+    width: 100%;
+
+}
+
+nav ul{
+    margin-right: 20px;
+}
+
+header img{
+    margin-left: 15px;
+    width: 50px;
+    cursor:pointer;
+}
+
+nav ul li{
+    list-style-type: none;
+    display:inline-block;
+    transition: .3s ease;
+    padding: 10px 20px;
+    font-size: 19px;
+}
+
+nav ul li a{
+    font-weight:bold; 
+    transition: .3s ease; 
+}
+
+
+nav ul li a:hover{
+  color: rgb(40, 40, 40);
+}
+nav{
+   float: right;
+
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+#home {
+    height:1000px;
+    background-image: url("./pexels-lisa-1279330.jpg");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index:1;
+    
+}
+
+#home::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index:-1;
+}
+
+#home .text{
+    position: relative;
+    top: 200px;
+    color:white;
+}
+
+
+
+#home .text h1{
+    font-weight: bold;
+    font-size: 120px;
+    text-align:center;
+    text-transform: uppercase;
+}
+
+#home .text{
+    top: 150px;
+}
+
+#home .text a{
+   
+    text-decoration: none;
+    color: white;
+    margin: 0px 30px;
+    display:block;
+    width: 175px;
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    
+}
+
+#home .text .linkA{
+    border: 3px solid red;
+    background-color: red;
+    margin: 25px auto;
+    padding: 20px 25px;
+    transition: .3s ease;
+    border-radius: 10px;
+}
+
+#home .text .linkB{
+    border: 3px solid  green;
+    background-color: green;
+    padding: 20px 25px;
+    margin: 0 auto;   
+    transition: .3s ease;
+    border-radius: 10px;
+}
+
+#home .text .linkA:hover{
+    background-color: rgb(245, 89, 89);
+    border: 3px solid rgb(245, 89, 89);
+}
+
+#home .text .linkB:hover{
+    background-color: rgb(67, 144, 67);
+    border: 3px solid rgb(67, 144, 67);
+}
+
+#About .info{
+    display:flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+
+#About .info img{
+    height: 500px;
+    width: 350px;
+    border-radius: 7px;
+    margin-right:35px;
+}
+
+#About .info .text{
+    margin-left: 35px;
+}
+
+p{
+    font-family:'Roboto';
+}
+
+#About .info p{
+    width: 500px;
+    text-align: justify;
+    margin-top:15px;
+    /*top:-125px;
+    left: 400px;*/
+}
+#About .achievement{
+    background-color: rgb(152, 152, 152);
+    text-align:center;
+    align-items:center;
+    justify-content: center;
+    margin-top: 80px;
+    height: 200px;
+    display:flex;
+    padding-bottom: 50px;
+}
+
+#About .achievement .icons {
+    margin: 10px 40px; 
+    height: 90px;
+    width: 260px;
+}
+
+#About .achievement .icons img{
+    height: 90px;
+    width: 90px;
+}
+
+#About .achievement .icons p{
+    margin-top: 10px;
+}
+#menu h2{
+    margin-top: 50px;
+    text-align:center;
+}
+#menu .foods{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+#menu .food{
+    width: 400px;
+   
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+#menu .image img{
+    height: 600px;
+    width: 400px;
+    margin-left: 40px;
+}
+
+#menu p{
+    color:rgb(135, 130, 130);
+}
+
+#menu .drinks{
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    margin-bottom: 90px;
+}
+
+#menu .drink{
+    width: 400px;
+    
+    margin-top: 40px;
+    margin-left: 60px;
+}
+
+#menu .drinks img{
+    height: 600px;
+    width: 400px;
+    margin-right: 60px;
+}
+
+#menu p{
+    color:rgb(135, 130, 130);
+}
+
+footer{
+    width: 100%;
+    height: 90px;
+    background-color:rgb(152, 152, 152)
+}
+
+footer h5{
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+
+footer .contain{
+    text-align:center;
+    color:rgb(46, 45, 45);
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
